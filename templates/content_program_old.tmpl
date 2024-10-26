@@ -1,0 +1,478 @@
+<div id="program" class="content-container">
+<div class="jumbotron">
+  <h1>
+     Program<br />
+     <small>North East Database Day 2024 </small><br />
+     <small>Thursday May 23rd, 2024</small><br/>
+     <small><a href="https://www.bu.edu/cpo/project/center-for-computing-data-sciences/">Center for Computing & Data Sciences (CCDS)</a> 1750 @ Boston University</small>
+  </h1>
+</div>
+	<p style="text-align: center;">
+	<a href="javascript: toggleVisibility ('showall')">Show</a>/<a href="javascript: toggleVisibility ('hideall')">Hide all abstracts</a>
+	</p>
+
+
+
+  <table class="table table-bordered table-hover table-condensed programTable"> 
+    <tbody>
+      <tr>
+        <th width="17%">Time</th>
+        <th width="83%">Event</th>
+      </tr>
+      <tr>
+        <td>8:00-8:45</td>
+        <td><strong>Registration</strong></td>
+      </tr>
+      <tr>
+        <td>8:45-9:00</td>
+        <td><strong>Welcome and Acknowledgments</td>
+      </tr>
+
+	  <tr class="success">
+        <td colspan="2" align="center"><strong>Session 1: Data systems and storage </strong> Chair: Nikos Tziavelis (Northeastern University)</td>
+      </tr>
+
+      <tr>
+        <td>9:00-9:40</td>
+        <td><strong>Keynote 1: </strong>
+		    Luna Dong (Meta) <i>Generations of Knowledge Graphs: The Crazy Ideas and The Business</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
+          <div id="keynote1A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              Knowledge Graphs (KGs) have been used to support a wide range of applications, from web search to personal assistant. In this talk, we describe three generations of knowledge graphs: entity-based KGs, which have been supporting general search and Q&A (e.g., at Google and Bing); text-rich KGs, which have been supporting search and recommendations for products, bio-informatics, etc.; and the emerging media-rich time-based KGs, which would play a critical role for personal virtual assistants. We explain the characteristics of each generation of KGs, and the crazy ideas behind the scenes in constructing such KGs. In addition, we also use knowledge graphs as examples to demonstrate how we evolve research ideas from innovations to practice, and then to the next level of innovations, to advance both science and production.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Xin Luna Dong</b> is a Principal Scientist at Meta Reality Lab. Prior to joining Meta, she was a Senior Principal Scientist at Amazon, leading the efforts of constructing Amazon Product Knowledge Graph, and before that one of the major contributors to the Google Knowledge Vault project, and has led the Knowledge-based Trust project, which is called the “Google Truth Machine” by Washington’s Post. She has co-authored books "Machine Knowledge: Creation and Curation of Comprehensive Knowledge Bases" and “Big Data Integration”, was awarded ACM Distinguished Member, and VLDB Early Career Research Contribution Award for “Advancing the state of the art of knowledge fusion”. She serves in the VLDB endowment and PVLDB advisory committee, and is a PC co-chair for KDD'2022 ADS track, WSDM 2022, VLDB 2021, and Sigmod 2018.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>9:45-9:57</td>
+
+        <td><i>Turning the Database Inside Out with FoundationDB: How we use FoundationDB to Unbundle Husky’s Storage Engine</i> <a href="nedb23-submissions/Turning the Database Inside Out - Richard Artoul.pdf">[PDF]</a><br/>
+	Richard Artoul (Datadog)
+          <!--<a href="talks/fernandez.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1A')">Click to toggle abstract.</a>
+          <div id="pa1A" class="abstract" style="display: none;">
+            <p>
+              Husky is Datadog’s distributed columnar analytics and search database that ingests and indexes trillions of events per day. FoundationDB plays a key role in Husky’s architecture to achieve distributed consensus and transaction processing. In this talk, we’ll focus on how we leverage FoundationDB to turn the database “inside out” and create a multi-role system that behaves like a single logical entity.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+ <td>10.00-10.12</td>
+        <td>
+   <i>Cosine: A Cloud-Cost Optimized Self-Designing Storage Engine</i><br/>
+  Subarna Chatterjee (Harvard University, USA)*; Meena Jagadeesan (UC Berkeley); Wilson Qin (Harvard University ); Stratos Idreos (Harvard)
+
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1C')">Click to toggle abstract.</a>
+          <div id="pa1C" class="abstract" style="display: none;">
+            <p>
+            We present a self-designing key-value storage engine, Cosine, which can always take the perfect shape of storage engine architecture given an input workload, a cloud budget, a target performance, and required cloud SLAs. By identifying and formalizing the first principles of storage engine layouts and core key-value algorithms, Cosine constructs a massive design space comprising of sextillion (1036) possibilities over diverse data structures (Log-Structured Merge-trees, B-trees, Log-Structured Hash-tables and trillions of hybrid designs in between), hardware, and cloud pricing policies. Cosine includes a unified, distribution-aware I/O model and a learned concurrency-aware CPU model that can accurately estimate the performance and cloud cost of any possible design on any workload and virtual machines. Cosine can then search through that space to find the optimal design. We demonstrate that on average Cosine outperforms state-of-the-art storage engines such as write-optimized RocksDB, read-optimized WiredTiger, and write-optimized FASTER by 53x, 25x, and 20x, respectively, for diverse workloads, data sizes, and cloud budgets across all YCSB core workloads and variants.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+ <td>10.15-10.18</td>
+        <td>
+   <i>TreeLine: An Update-In-Place Key-Value Store for Modern Storage</i> <a href="nedb23-submissions/2023-03-10_NEDB_TreeLine_Presentation.pdf">[PDF]</a> <a href="nedb23-submissions/2023-03-10_NEDB_TreeLine_Poster.pdf">[Poster]</a><br/>
+  Geoffrey X. Yu (Massachusetts Institute of Technology); Markos Markakis (Massachusetts Institute of Technology)*; Andreas Kipf (Amazon Web Services); Per-Ake Larson (University of Waterloo); Umar Farooq Minhas (Apple); Tim Kraska (MIT)
+
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1D')">Click to toggle abstract.</a>
+          <div id="pa1D" class="abstract" style="display: none;">
+            <p>
+            Many modern key-value stores, such as RocksDB, rely on log-structured merge trees (LSMs). Originally designed for spinning disks, LSMs optimize for write performance by only making sequential writes. But this optimization comes at the cost of reads: LSMs must rely on expensive compaction jobs and Bloom filters—all to maintain reasonable read performance. For NVMe SSDs, we argue that trading off read performance for write performance is no longer always needed. With enough parallelism, NVMe SSDs have comparable random and sequential access performance. This change makes update-in-place designs, which traditionally provide excellent read performance, a viable alternative to LSMs. In our paper, we close the gap between log-structured and update-in-place designs on modern SSDs with the help of new components that take advantage of data and workload patterns. Specifically, we explore three key ideas: (A) record caching for efficient point operations, (B) page grouping for high-performance range scans, and (C) insert forecasting to reduce the reorganization costs of accommodating new records. We evaluate these ideas by implementing them in a prototype update-in-place key-value store called TreeLine. On YCSB, we find that TreeLine outperforms RocksDB and LeanStore by 2.20× and 2.07× respectively on average across the point workloads, and by up to 10.95× and 7.52× overall.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+  <td>10.18-10.30</td>
+        <td>
+   <i>The Materialize Architecture</i> <a href="nedb23-submissions/NEDB Poster-Materialize-22x34-v2.pdf">[PDF]</a> <br/>
+  Frank McSherry (Materialize)
+
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1E')">Click to toggle abstract.</a>
+          <div id="pa1E" class="abstract" style="display: none;">
+            <p>
+            Materialize is a cloud-native streaming database.
+            It presents as a conventional SQL database, where users interactively create tables, views, indexes, and manipulate data. Unlike conventional databases, Materialize both computes and then incrementally maintains the results of complex SQL queries.
+            Work is done at the moment of data arrival, rather than query time, so that maintained results are available almost instantly. Architecturally, Materialize uses a cloud-based separation of storage, compute, and serving. Data updates are continually ingested, recorded, and shared via a S3- backed storage that resembles a log-structured merge tree. Decoupled compute “clusters” transform snapshots and update streams into the corresponding output updates for views they maintain. The serving layer receives SQL commands, instructs the lower layers, and ultimately produces query results as if a transactional database.
+            The decoupling of layers provides flexibility in implementation, but also challenges for system- wide efficiency and correctness. Materialize uses Virtual time as its concurrency control. All ingested data updates receive a durable logical timestamp, indicating the apparent system time at which the update occurs. All view maintenance produces output updates with timestamps that exactly correspond to their input timestamps, again the apparent system time at which the view output changes. All SQL commands receive a timestamp corresponding to the apparent system time at which they occur; views are read out of at this logical timestamp.
+            Despite decoupling (and scaling) storage, compute, and service, Materialize provides strict serializability by default.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>10:30-11:00</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+       <tr class="success">
+        <td colspan="2" align="center"><strong>Session 2: Query optimization and indexing</strong> Chair: Brit Youngmann (MIT) </td>
+      </tr>
+
+
+      <tr>
+		<td>11.00- 11.12</td>
+        <td>
+	<i>Learning-based Creation of Data Mesh Architectures</i> <a href="nedb23-submissions/yu-Learning-Based Creation of Data Mesh Architectures.pdf">[PDF]</a> <br/>
+	Tim Kraska (MIT); Tianyu Li (Massachusetts Institute of Technology); Samuel Madden (MIT); Markos Markakis (Massachusetts Institute of Technology)*; Amadou L Ngom (MIT); Ziniu Wu (Massachusetts Institute of Technology); Geoffrey X. Yu (Massachusetts Institute of Technology)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2C')">Click to toggle abstract.</a>
+          <div id="pa2C" class="abstract" style="display: none;">
+            <p>
+            The last decade has seen an explosion of specialized database engines for both transactional and analytical workloads, driven by the idea that “one size does not fit all”. Consequently, organizations often use a combination of specialized systems for their workloads, organized in a Data Mesh. Benefits aside, this scheme raises significant challenges for system administrators, including moving data between systems, maintaining consistency, and configuring each system. At the same time, many end users (e.g., data analysts or app developers) are not experts in the peculiarities of these systems, and either cannot solve their business problems , or leave performance on the table. To address this, we envision Encephalon, a cloud system that automatically integrates and manages data and systems into an instance-optimized data mesh, allowing users to store and query data efficiently without knowledge of underlying system details. Encephalon presents a unified data model (i.e., relational tables) and federates queries (e.g., in SQL) across the underlying engines. With machine learning, Encephalon automatically deduces the strengths and weaknesses of each engine through a combination of offline training and online probing. Then, Encephalon uses these insights to route queries to the most suitable (combination of) system(s) for efficient execution. Furthermore, Encephalon automates configuration tuning, resource scaling, and data migration across component systems with self-driving techniques, and makes recommendations for more impactful decisions such as adding or removing systems. As such, Encephalon exemplifies a new class of systems that utilize machine learning and the cloud to make database advances more accessible to end users, raising a host of new problems in databases, machine learning, and cloud computing.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>11.15-11.27</td>
+        <td>
+  <i>Embedding Database Logic in the Operating System Is Finally a Good Idea</i> <a href="nedb23-submissions/butrovich-Embedding Database Logic in the Operating System Is Finally a Good Idea - Matthew Butrovich.pdf">[PDF]</a><br/>
+  Matthew Butrovich (Carnegie Mellon University)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2D')">Click to toggle abstract.</a>
+          <div id="pa2D" class="abstract" style="display: none;">
+            <p>
+				The recent increase in computer storage and network performance means the system calls provided by the operating system (OS) are often the I/O bottlenecks for database management system (DBMS) performance. In this talk, I present user-bypass — enabling to developers push DBMS logic into the kernel’s stack to avoid copying data between user-space and kernel-space. As a motivating example, I demonstrate the benefits of user-bypass with Tigger, a DBMS proxy similar to PgBouncer that achieves 2× throughput over a state-of-the-art proxy.           </p>
+			</p>
+		  </div>
+        </td>
+      </tr>
+
+
+      <tr>
+	    <td>11.30-11.42</td>
+        <td>
+  <i>Endure: A Robust Tuning Paradigm for LSM Trees Under Workload Uncertainty</i> <a href="nedb23-submissions/huynh-Endure A Robust Tuning Paradigm for LSM Trees Under Workload Uncertainty - Andy Huynh(1).pdf">[PDF]</a><br/>
+  Andy Huynh (Boston University)*; Harshal Chaudhari (Boston University); Evimaria Terzi (Boston University); Manos Athanassoulis (Boston University)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2E')">Click to toggle abstract.</a>
+          <div id="pa2E" class="abstract" style="display: none;">
+            <p>
+            Tuning LSM Key-Value Stores. Log-Structured Merge trees (LSM trees) are the most commonly deployed data structures used in the backend storage of modern key-value stores due to their flexibility, high ingestion rate, and fast reads. As the number of applications relying on LSM-based storage backends increases, the problem of performance tuning for LSM trees has garnered a lot of attention. A common assumption made by all these methods is that one has complete knowledge about the expected workload and the execution environment. Given such knowledge, prior work optimizes either memory allocation to Bloom filters across different levels, memory distribution between the buffers and the Bloom filters, or the choice of merging policies (i.e., leveling or tiering). Different optimization objectives have led to hybrid merging policies with more fine-grained tunings, optimized memory allocation strategies, variations of Bloom filters, new compaction routines, and exploitation of data characteristics.
+
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+		<td>11.45-11.57</td>
+        <td>
+  <i>Relational Memory: Native In-Memory Accesses on Rows and Columns</i><br/>
+  Ju Hyoung Mun (Boston University)*; Tarikul Islam Papon (Boston University); Shahin Roozkhosh (Boston University); Denis Hoornaert (Technical University of Munich); Ahmed Sanaullah (Red Hat); Ulrich Drepper (Red Hat); Renato Mancuso (Boston University); Manos Athanassoulis (Boston University)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2F')">Click to toggle abstract.</a>
+          <div id="pa2F" class="abstract" style="display: none;">
+            <p>
+            The decision on which data layout to use, a row-oriented, a column-oriented, or a hybrid layout, is driven by the application requirements since a row-oriented layout works great for accessing, inserting, or updating entire rows, while a columnar layout is a good fit for analytical queries. To bridge the analytical and transactional requirements, hybrid systems often maintain multiple copies of data in different layouts for ingestion and analytics, paying the cost of data layout conversion, duplication, and additional bookkeeping. How would this design change if the optimal layout was always available?
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+	  <tr>
+		<td>12.00-12.12</td>
+        <td>
+     <i>Query-Driven Probabilistic Programming</i> <a href="nedb23-submissions/niccolo_meneghetti_QueryDrivenPP - Niccolò Meneghetti.pdf">[PDF]</a><br/>
+    Niccolo Meneghetti (University of Michigan - Dearborn)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3C')">Click to toggle abstract.</a>
+          <div id="pa3C" class="abstract" style="display: none;">
+            <p>
+              Can we use relational query languages as a tool for probabilistic programming? Our answer is affirmative! In this talk I will review the most recent developments of my work in the field of “learning from query-answers”, a long-lived research effort aimed at expressing probabilistic programs using relational constraints. These developments include the introduction of a novel physical operator to perform Gibbs sampling using just-in-time compilation, and the adoption of variational techniques to perform approximate inference.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+		<td>12.15-12.18</td>
+        <td>
+  <i>Time Series Indexing at Scale</i> <a href="nedb23-submissions/Krylysov - Time Series Indexing at Scale - Artem Krylysov.pdf">[PDF]</a><br/>
+  Artem Krylysov (Datadog)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2G')">Click to toggle abstract.</a>
+          <div id="pa2G" class="abstract" style="display: none;">
+            <p>
+            The Datadog Metrics product is used to monitor software running on millions of machines. To do that, we ingest trillions of data points a day submitted by thousands of customers. As the amount of data we have to index continued increasing and the customer base grew 250% from 2017 to 2021, the query patterns of the indexing subsystem changed dramatically. The customers wanted to monitor and analyze more data using more complex queries. The indexing strategy that the time series database relied on since 2016 became a performance bottleneck for queries and the source of increased maintenance. To solve these problems, we had to adapt an entirely different indexing strategy that allowed us to support 20 times larger queries, significantly improved the tail query latency, resulted in a 99% reduction of query timeouts and made the indexing subsystem nearly 50% cheaper to run. This talk will give a high-level overview of the Datadog time series database and challenges of time series indexing at scale. We'll compare two different indexing strategies and the impact each had on read and write database performance.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+		<td>12.20-12.23</td>
+        <td>
+  <i>Optimizing Video Selection Queries With Commonsense Knowledge</i> <a href="nedb23-submissions/He-Optimizing Video Selection Queries With Commonsense Knowledge - Alice H.pdf">[PDF]</a><br/>
+  Wenjia He (University of Michigan)*; Ibrahim Sabek (MIT); Yuze Lou (University of Michigan); Michael Cafarella (MIT CSAIL)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2H')">Click to toggle abstract.</a>
+          <div id="pa2H" class="abstract" style="display: none;">
+            <p>
+            With the increased availability and popularity of video databases, video selection queries have emerged as a growing area of research interest. These queries are utilized for selecting desired videos that satisfy certain predicates, especially containing target objects. This kind of query can help video search in social media platforms, dataset construction for machine learning pipelines, etc. Due to the large size of existing video databases, it is a common practice to include the LIMIT clause in selection queries in order to limit the size of the returned video set. For example, a user might want to search for 10 videos containing tennis balls from a video corpus so as to study the trajectory of tennis serves. She can specify the name of this target object in the predicate of her selection query. In principle, the object information in videos is unknown and needs to be extracted by applying a built-in object detector.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+		<td>12.25-12.28</td>
+        <td>
+  <i>Accord - Fast and leaderless general purpose transactions</i> <a href="nedb23-submissions/Accord - Northeast Database Day - Ariel Weisberg - Ariel Weisberg(1).pdf">[PDF]</a> <br/>
+  Ariel D Weisberg (Apple Inc.)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2I')">Click to toggle abstract.</a>
+          <div id="pa2I" class="abstract" style="display: none;">
+            <p>
+            Accord provides general purpose (multi-key) transactions with one WAN roundtrip fast path consensus even in the face of `f` failures (using `2f + 1 replicas`) and guarantees 2 WAN roundtrips under contention. Even under contention Accord can usually provide 1 WAN roundtrip fast path consensus. Accord accomplishes this by composing flexible fast path quorums, dependency tracking, and timestamp reordering into a single protocol.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>12:30-1:30</td>
+        <td><strong>Lunch Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 3: Data management for data science </strong> Chair: El Kindi Rezig (MIT) </td>
+      </tr>
+
+     <tr>
+        <td>1.30-2.10</td>
+        <td><strong>Keynote 2: </strong>
+    Eugene Wu (Columbia University) <i>Systems for Human Data Interaction</i>
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote2A')">Click to toggle abstract and bio.</a>
+          <div id="keynote2A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+The rapid democratization of data has placed its access and analysis in the hands of the entire population. While the advances in rapid and large-scale data processing continue to reduce runtimes and costs, the interfaces and tools for end-users to interact with, and work with, data is still lacking. It is still too difficult to translate a user’s data needs into the appropriate interfaces, too difficult to develop data intensive interfaces that are responsive and scalable, and too difficult for users to understand and interpret the data they see. In this talk, I will provide an overview of our lab's recent work on systems for human data interaction that go towards addressing these challenges.
+            </p>
+            <h3>Bio</h3>
+            <p>
+EUGENE WU is an Associate Professor of Computer Science at Columbia University. He received a Ph.D. in EECS from MIT, and B.S. from UC Berkeley. He is broadly interested in technologies for human data interaction, and how users can effectively and quickly make sense of their data. Eugene is interested in solutions that ultimately improve the interface between users and data, and combines ideas from database management, visualization, and HCI.  Eugene Wu has received the VLDB 2018 test of time award, the coveted CIDR gong show award, best-of-conference citations at ICDE and VLDB, the SIGMOD 2016 best demo award, the NSF CAREER, and multiple Google and Amazon faculty awards.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td>2.15-2.27</td>
+        <td>
+		<i>Table Discovery and Integration in Data Lakes: Challenges and Solutions</i> <br/>
+		Aamod Khatiwada (Northeastern University)*; Grace Fan (Northeastern University)
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3A')">Click to toggle abstract.</a>
+          <div id="pa3A" class="abstract" style="display: none;">
+            <p>
+              Data scientists use tabular data to support decision-making processes, train machine learning models, perform statistical analysis, and more. It can be time-consuming and labor-intensive to search for tables that are relevant to an analysis. In the context of data lakes, which contain millions of tables, there could be many possible sources of data. The enormous size and heterogeneity of data lakes, together with the fact that metadata may be missing or unreliable, make it challenging for data scientists to find suitable tables for their analyses. In this talk, we cover recent results from the Northeastern Data Lab that help data scientists efficiently and effectively find tables from the data lake that union with their query table. We will also discuss new results on how to best integrate the discovered tables particularly when the discovered tables may be incomplete and simple union is insufficient.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>2.30-2.42</td>
+        <td>
+		 <i>Serverless State Management Systems</i> <br/>
+		Tianyu Li (Massachusetts Institute of Technology)*; Badrish Chandramouli (Microsoft Research); Samuel Madden (MIT)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3B')">Click to toggle abstract.</a>
+          <div id="pa3B" class="abstract" style="display: none;">
+            <p>
+              The cloud is undergoing a major shift – cloud vendors increasingly provide managed services, packaging high-level functionalities (e.g., database services) with fine-grained, disaggregated resources(e.g., FaaS compute and object storage), instead of simply offering coarse-grained resource rentals. This new reality, broadly described as “serverless”, allows cloud developers to quickly assemble sophisticated applications from existing building blocks, only pay for the resource needed, and quickly scale up and down to meet fluctuating demands. However, this makes modern cloud applications more distributed and high-level, and consequently less intuitive than ever; developers must manually select building blocks from a wide variety of options, orchestrate work across them, and handle various partial failure scenarios. What is needed is strong, novel abstractions to free the developers from these burdens, separating the logical cloud application, consisting of various abstract components and services communicating with each other, and the physical execution layer that deploys, maintains, and scales individual services given each use case. This talk is a thought experiment about a new class of cloud services, called Serverless State Management Systems (SSMS), analogous to the classical Database Management System (DBMS) that revolutionized data management half a century ago. We postulate that SSMS would need to standardize and support three important facets of cloud development: a logical application model, similar to relational algebra, that describes application semantics but abstracts away the deployment details, strong resiliency primitives, similar to ACID transactions, that simplifies fault-tolerant programming in the cloud, and finally, smart, cost-based optimization schemes that automates scheduling, placement, and other execution details, similar to a cost-based query optimizer.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>2.45-2.57</td>
+        <td>
+     <i>Ghost-Data: Workloads that mimic data without ever seeing it</i> <br/>
+    Kapil Vaidya (Amazon)*; Alex Van Renen (Amazon); Murali Narayanaswamy (Amazon); Tim Kraska (MIT)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3D')">Click to toggle abstract.</a>
+          <div id="pa3D" class="abstract" style="display: none;">
+            <p>
+              Database providers and owners, have a strong emphasis on security and keeping data protected and private. A typical strictly enforced policy is, that even the operators and developers of a database do not have the access or ability to look, copy, or touch any of the stored data. At the same time, (regression) testing or debugging, requires a facsimile of the database and queries. We often need to be able to replay workloads, which requires the data and query workload, for debugging purposes and to avoid regressions when rolling out new features or to check if a change fixes an issue. While shadow-copies can mitigate this problem, they do not allow us to repeat the exact same sequence of queries a second time, making debugging specific problems much harder.
+              We present Ghost-Data , a tool that can synthetically generate data and queries, which capture the complexity of a workload for performance and regression testing, without requiring access to the data. While this sounds impossible, it turns out that it is possible to generate synthetic datasets with no direct access to the data just based on the cardinality of query operations and the structure of queries, both of which are often already found in the system logs. GhostData uses “only” the query structure and the cardinality of operations, not any potentially sensitve data such as the query SQL text, table or column names, any query literals or the query time.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3.00-3.03</td>
+        <td>
+     <i>Causal Data Integration & Summarization</i> <br/>
+    Anna Zeng (MIT)*; Babak Salimi (University of California at San Diego); Brit Youngmann (MIT); Michael Cafarella (MIT CSAIL)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3E')">Click to toggle abstract.</a>
+          <div id="pa3E" class="abstract" style="display: none;">
+            <p>
+              At NEDB 2023, we hope to present our ongoing research on how data management can enable broad use and application of causal inference in data analysis tasks.
+              Causal inference lies in the heart of empirical research in natural and social sciences, and is commonly used in multiple disciplines, including sociology, medicine, and economics. It aims to answer causal queries, such as, “Does being overweight cause coronary heart disease – independent of cholesterol, and diabetes?", or “Do tobacco advertisements entice adolescents to buy more cigarettes regardless of whether their parents smoke?" Causal inference enables analysts to answer causal questions about attributes from a dataset, ultimately enabling them to make real-world discoveries. Pearl’s causal framework, which we adapt in this work, provides a principled way to causal inference using structural causal models.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>3.05-3.08</td>
+        <td>
+     <i>Learned Interactive Visualization Interfaces</i> <a href="nedb23-submissions/chen-Learned Interactive Visualization Interfaces - Yiru Chen.pdf">[PDF]</a> <br/>
+    Yiru Chen (Columbia University)*; Eugene Wu (Columbia University)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3F')">Click to toggle abstract.</a>
+          <div id="pa3F" class="abstract" style="display: none;">
+            <p>
+              Interactive visualization interfaces are critical in data analysis. It requires considerable expertise and trial-and-error to design a new interface because the charts, interactions, and layout should be chosen to support the underlying analysis task. As such, a major goal is to help designers more quickly and effectively translate analysis tasks into interfaces. We introduce PI2, the first system to generate fully functional interactive visualization interfaces from a representative sequence of task queries. Our user studies show that PI2 interfaces are comparable to or better than those designed by developers, and that PI2 can generate exploration interfaces that are easier to use than the state-of-the-art SQL notebook products. Furthermore, we develop NL2INTERFACE to explore the potential of generating usable interactive visualization interfaces from natural language queries.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>3.10-3.13</td>
+        <td>
+     <i>LucidScript: Automatically Improving Data Preparation Scripts</i> <br/>
+    Eugenie Y. Lai (Massachusetts Institute of Technology )*; Yuze Lou (University of Michigan); Brit Youngmann (CSAIL MIT); Michael Cafarella (MIT CSAIL)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3G')">Click to toggle abstract.</a>
+          <div id="pa3G" class="abstract" style="display: none;">
+            <p>
+              Data preparation has been seen as "janitor work" yet essential in data-to-insight pipelines. The increasing liberality of data is fol- lowed by an explosion in the diversity of data consumers. However, the required technical and domain expertise prevents many from performing extensive data preparation. Further, many seem to be stuck in a vicious cycle of writing one-off programs to process data. Recently, automating data preparation programs has been shown to improve many aspects of the pipeline, including data quality, research reproducibility, and user productivity. We propose a novel approach to automatically improve data preparation programs.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3.15-3.18</td>
+        <td>
+     <i>Database Choices for Enterprise Software</i> <a href="nedb23-submissions/Bashyam-Database-Choices-for-enterprise-software - Vijaya Bashyam.pdf">[PDF]</a> <br/>
+    Vijaya Bashyam (IBM)*; Neeru Gupta (IBM)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3H')">Click to toggle abstract.</a>
+          <div id="pa3H" class="abstract" style="display: none;">
+            <p>
+              Microservices architecture (often shortened to microservices) refers to an architectural style for developing applications. Microservices allow a large application to be separated into smaller independent parts, with each part having its own realm of responsibility. To serve a single user request, a microservices-based application can call on many internal microservices to compose its response.
+              Containers are a well-suited microservices architecture example, since they let you focus on developing the services without worrying about the dependencies. Modern cloud-native applications are usually built as microservices using containers. Each microservice is independent so it can choose its own technology stack and persistence layer as per its own requirements. Some of the microservices will require more relational databases. While other may require highly scalable NoSQL databases
+              IBM Sterling Order Management is one such example of a cloud native product built on microservices architecture. IBM Sterling Order Management is a market leading omni channel order management software handling order orchestration, inventory visibility, optimized order fulfillment, intelligent promising and AI-infused execution as well as reverse logistics and supply collaboration. Sterling order management system (OMS) software helps transform enterprises with complex needs in managing their inventory, orders, and fulfillment across their network of sellers, buyers, warehouses, ship nodes and vendor locations.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>3.20-4.00</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+  <tr class="success">
+        <td>4.00-6.00</td>
+        <td>
+  <i>Poster session </i>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>6.00-7.30</td>
+        <td>
+  <i>Student pizza networking session (ISEC 655) </i>
+
+        </td>
+      </tr>
+
+
+       <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+  <tr class="success">
+        <td colspan="2" align="center"><strong>End Of Official Program</strong></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>

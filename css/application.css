@@ -1,0 +1,224 @@
+body {
+    /*padding: 20px;*/
+    background-color: #FFFFFF;
+    font-size: 15pt;
+    font-weight: normal;
+    color: #777;
+    color: rgb(34, 34, 34);
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+#nav {
+    height: 100%;
+    padding-right: 20px;
+    padding-top: 2em;
+    font-size: 18pt;
+}
+
+#nav .sidebar {
+    width: 95%;
+    list-style: none;
+}
+
+#nav .sidebar li {
+    border: 0 #f2f2f2 solid;
+    border-bottom-width: 1px;
+    margin: 15px 0 0 0;
+    font-weight: bold;
+}
+
+h1,.jumbotron h1 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Josefin Sans"
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 2em;
+    /*color: navy;*/
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1.5em;
+    /*color: navy;*/
+}
+
+.jumbotron {
+    padding: 2em;
+    background-color: #E0EEEE;
+    color: black;
+    background-color: #EBF3F9;
+    box-shadow: 0px 2px 5px #CDD6DC;
+    margin-top: -2em;
+}
+
+.jumbotron p {
+    font-size: 15pt;
+    font-weight: normal;
+}
+
+.content-container {
+  width: 80%;
+  padding: 2em;
+}
+
+#logo {
+  background-image:url(../images/northeast.png); 
+  width:70%; 
+  min-width: 200px; 
+  height: 200px; 
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+#logo span {
+  font-weight: bold;
+  font-size: 25pt;
+  line-height: 90%;
+  color: black; 
+  font-family: "Josefin Sans", Sahitya, Raleway, Gill Sans;
+}
+#logocontainer:hover {
+  text-decoration: none;
+  color: navy;
+}
+
+p {
+  margin: 1em;
+}
+
+#registerbtn {
+  display: block;
+  padding: 1em; 
+  padding-left: 4em;
+  padding-right: 4em;
+  background: #428bca; 
+  color: white; 
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+#registerbtn:hover {
+  background: #2F71A9;
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 850px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+    .row-offcanvas-right
+  .sidebar-offcanvas {
+        right: -41.6%;
+    }
+    .row-offcanvas-left
+  .sidebar-offcanvas {
+        left: -41.6%;
+    }
+    .row-offcanvas-right.active {
+        right: 41.6%;
+    }
+    .row-offcanvas-left.active {
+        left: 41.6%;
+    }
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 41.6%;
+    }
+    #nav {
+        padding-top: 0;
+    }
+    #nav .sidebar>li {
+        color: #ddd;
+    }
+    #nav .sidebar>li:first-child {
+        border-top: 0;
+        
+    }
+    #logocontainer {
+      /*float: left;*/
+      display:none;
+    }
+    #logo {
+      width:100%; 
+      height: 150px;
+      background-size: contain;
+      float: left;
+    }
+
+    .jumbotron {
+      margin-top: 1em;
+      width: 100%;
+    }
+
+    #content {
+        min-height: 350px;
+    }
+    .content-container {
+        padding: 10px 50px 0 50px;
+        width: 100%;
+        /*border-top: #226821 2px solid;*/
+    }
+    .content-container>.panel-default,.content-container>.list-group {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+}
+
+h2.sponsorCallout {
+    text-align: center;
+    width: 600px;
+}
+
+p.sponsorCallout {
+    text-align: center;
+    width: 600px;
+    color: #333333;
+}
+
+p.programDate {
+    color: #666666;
+    margin: 0;
+    font-size: 14pt;
+}
+
+.programTable, .posterTable {
+    min-width: 600px;
+    width: 86%;
+    font-size: 12pt;
+}
+
+.programTable a, .posterTable a {
+    font-size: 12pt;
+}
+
+.abstract {
+    color: #666666;
+    font-size: 12pt;
+    line-height: 1;
+}
+
+.abstract h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: 1;
+    margin: 10px 0 0 0;
+    color: navy;
+}
+
+.table-condensed>thead>tr>th,.table-condensed>tbody>tr>th,.table-condensed>tfoot>tr>th,.table-condensed>thead>tr>td,.table-condensed>tbody>tr>td,.table-condensed>tfoot>tr>td
+    {
+    padding: 3px 15px 2px 15px;
+}
+

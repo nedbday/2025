@@ -1,0 +1,547 @@
+<div class="content-container">
+  <h1>
+    North East Database Day 2023  <br />
+    <small>Thursday May 23rd, 2024</small><br/>
+    <small>Center for Computing & Data Sciences (CCDS) 1750 @ Boston University</small>
+  </h1>
+<h2 class="sponsorCallout">Special thanks to this year's sponsors</h2>
+  <p class="sponsorCallout">
+       <img src="images/logos/tableau.png" width="230" /> &nbsp; &nbsp;
+    <img src="images/logos/google_new.png" width="230" />&nbsp; &nbsp;
+    <img src="images/logos/facebook5.jpg" width="230" /> &nbsp; &nbsp;
+   <img src="images/logos/amazon-web-services.png" width="230" /> &nbsp; &nbsp;
+   <img src="images/logos/MSFT_large.png" width="240" />
+  </p>
+
+  <table class="table table-bordered table-hover table-condensed programTable">
+    <tbody>
+      <tr>
+        <th width="17%">Time</th>
+        <th width="83%">Event</th>
+      </tr>
+      <tr>
+        <td>8:15-8:50</td>
+        <td><strong>Registration</strong></td>
+      </tr>
+      <tr>
+        <td>8:50-9:00</td>
+        <td><strong>Welcome and Acknowledgments: </strong> Stratos Idreos (Harvard)</td>
+      </tr>
+      <tr>
+        <td>9:00-9:30</td>
+        <td><strong>Keynote 1: </strong>
+		Peter Mattis (Cockroach Labs) <i>CockroachDB: Architecture of a Geo-Distributed SQL Database</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
+          <div id="keynote1A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              In this talk Cockroach Labs' CTO and co-founder, Peter Mattis, will speak to the architecture of an open-source, geo-distributed, SQL database. The talk will be a whirlwind tour of CockroachDB’s architecture, covering the usage of Raft, the challenges of data distribution, distributed transactions, distributed SQL execution, and distributed SQL optimizations.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Peter Mattis</b>  Peter is the co-founder of Cockroach Labs where he works on a bit of everything, from low level optimization of code to refining the overall design. He has worked on distributed systems for most of his career, designing and implementing the original Gmail backend search and storage system at Google and designing and implementing Colossus, the successor to Google's original distributed file system. In his university days he was one of the original authors of the GIMP and is still amazed when people tell him they use it frequently.
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 1: </strong>Chair: Mike Cafarella (University of Michigan)</td>
+      </tr>
+      <tr>
+        <td>9:30-9:45</td>
+
+        <td><i>Spanner vs. SLOG: What’s the best way to run strictly serializable, geo-replicated transactions?</i><br/>
+	Daniel J Abadi (UMD)
+          <!--<a href="talks/fernandez.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1A')">Click to toggle abstract.</a>
+          <div id="pa1A" class="abstract" style="display: none;">
+            <p>
+              For decades, applications deployed on a world-wide scale have been forced to give up at least one of (1) strict serializability (2) low latency writes (3) high transactional throughput. In this talk we discuss SLOG: a system that avoids this tradeoff for workloads which contain physical region locality in data access. SLOG achieves high-throughput, strictly serializable ACID transactions at geo-replicated distance and scale for all transactions submitted across the world, all the while achieving low latency for transactions that initiate from a location close to the home region for data they access. SLOG can reduce latency by more than an order of magnitude relative to state-of-the-art strictly serializable geo-replicated database systems such as Spanner and Calvin, while maintaining high throughput under contention.
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>9:45-10:00</td>
+        <td>
+	 <i>Opportunities for Optimism in Contended Main-Memory Transactions</i><br/>
+	Eddie Kohler (Harvard University), Yihe Huang (Harvard University), William L Qian (Harvard University), Barbara Liskov (MIT), Liuba Shrira (Brandeis University)
+
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1B')">Click to toggle abstract.</a>
+          <div id="pa1B" class="abstract" style="display: none;">
+            <p>
+            Optimistic concurrency control, or OCC, can achieve excellent performance on uncontended workloads for main-memory transactional databases. Contention causes OCC's performance to degrade, however, and recent concurrency control designs, such as hybrid OCC/locking systems and variations on multiversion concurrency control (MVCC), have claimed to outperform the best OCC systems. We evaluate several concurrency control designs under varying contention and varying workloads, including TPC-C, and find that implementation choices unrelated to concurrency control may explain much of OCC's previously-reported degradation. When these implementation choices are made sensibly, OCC performance does not collapse on high-contention TPC-C. We also present two optimization techniques, commit-time updates and timestamp splitting, that can dramatically improve the high-contention performance of both OCC and MVCC. Though these techniques are known, we apply them in a new context and highlight their potency: when combined, they lead to performance gains of 3.4x for MVCC and 3.6x for OCC in a TPC-C workload.
+            </p>
+          </div>
+        </td>
+      </tr>
+ <td>10:00-10:15</td>
+        <td>
+   <i>The Materialize Incremental View Maintenance Engine</i><br/>
+  Frank McSherry (Materialize, Inc.)
+
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1C')">Click to toggle abstract.</a>
+          <div id="pa1C" class="abstract" style="display: none;">
+            <p>
+            At Materialize we are building a database analyics engine aimed at incremental view maintenance. Users interactively pose standing SQL92 queries, which are installed and then continually maintained as the underlying data change. Perhaps surprisingly, neither existing database systems nor stream processors are well suited to this increasingly popular and relevant task. Building on timely dataflow and differential dataflow, we can hybridize the best characteristics of these classes of system, for this domain, and provide an interactive experience that does not otherwise exist in current systems.
+            </p>
+          </div>
+        </td>
+      </tr>
+ <td>10:15-10:30</td>
+        <td>
+   <i>Learning Multi-dimensional Indexes</i><br/>
+  Vikram Nathan (MIT), Jialin Ding (MIT), Mohammad Alizadeh (MIT CSAIL), Tim Kraska (MIT)
+
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1D')">Click to toggle abstract.</a>
+          <div id="pa1D" class="abstract" style="display: none;">
+            <p>
+            Scanning and filtering over multi-dimensional tables are key operations in modern analytical database engines. To optimize the performance of these operations, databases often create clustered indexes over a single dimension or multi-dimensional indexes such as R-Trees, or use complex sort orders (e.g., Z-ordering). However, these schemes are often hard to tune and their performance is inconsistent across different datasets and queries. In this paper, we introduce Flood, a multi-dimensional in-memory read-optimized index that automatically adapts itself to a particular dataset and workload by jointly optimizing the index structure and data storage layout. Flood achieves up to three orders of magnitude faster performance for range scans with predicates than state-of-the-art multi-dimensional indexes or sort orders on real-world datasets and workloads.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>10:30-11:00</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+       <tr class="success">
+        <td colspan="2" align="center"><strong>Session 2 </strong>Chair: Manos Athanassoulis (Boston University) </td>
+      </tr>
+
+
+      <tr>
+        <td>11:00-11:30</td>
+        <td><strong>Keynote 2: </strong>
+		Nga Tran (Tableau) <i>Tableau: Explain Data and Ask Data</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote2A')">Click to toggle abstract and bio.</a>
+          <div id="keynote2A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+             This demo-heavy talk presents two of Tableau’s Augmented Analytic features: Explain Data and Ask Data, built using Statistics and Natural Language Processing respectively. The talk will start with a demo showcasing the need of these two features, after which each feature will be presented in its own demo to illustrate its powerful usage in Tableau. The talk will conclude with a research idea on automatically generating visualizations using automated statistical analysis from metadata.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              Nga Tran is a Senior Manager of the Automated Statistics Team at Tableau. Before that, she had been with Vertica Analytics DB for over a decade since the company in its early startup stage and had helped build the Query Optimizer and then had run the Engineering team.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>11:30-11:45</td>
+        <td> <i>Semi-supervised learning from sparse labels with algebraic amplification</i> <br/>Krishna Kumar (IIT Madras), Paul Langton (Northeastern University), Wolfgang Gatterbauer (Northeastern University)
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2B')">Click to toggle abstract.</a>
+          <div id="pa2B" class="abstract" style="display: none;">
+            <p>
+              Node classification is an important problem in graph data management, and is commonly solved by various label propagation methods that work iteratively starting from a few labeled seed nodes. For graphs with arbitrary compatibilities between classes, these methods crucially depend on a compatibility matrix between classes that is commonly provided either by domain experts or heuristics. Can we instead derive compatibilities from the actual graph we like to label in a principled and scalable way?
+
+We answer this question positively and suggest a method ("distant compatibility estimation'') that can estimate the compatibilities on extremely sparsely labeled graphs (e.g., 1 in 10,000 nodes is labeled) in a fraction of time it later takes to label the remaining nodes. This makes it a cheap pre-processing step for any existing label propagation method and removes the current dependence on any domain experts or heuristics.
+
+Our approach first creates multiple consistent and compact factorized graph representations (with size independent on the graph) and only then perform estimation on these smaller representations. We show that the classification accuracy of our proposed estimator is comparable to using "ground truth" compatibilities and that our estimator is by orders of magnitude faster than standard approaches based on train-test sets.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>11:45-12:00</td>
+        <td>
+	<i>AI Data Wrangling with Associative Arrays</i><br/>
+	Jeremy Kepner (MIT Lincoln Laboratory)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2C')">Click to toggle abstract.</a>
+          <div id="pa2C" class="abstract" style="display: none;">
+            <p>
+            The AI revolution is data driven. AI “data wran- gling” is the process by which unusable data is transformed to support AI algorithm development (training) and deployment (inference). Significant time is devoted to translating diverse data representations supporting the many query and analysis steps found in an AI pipeline. Rigorous mathematical repre- sentations of these data enables data translation and analysis optimization within and across steps. Associative array algebra provides a mathematical foundation that naturally describes the tabular structures and set mathematics that are the basis of databases. Likewise, the matrix operations and corresponding inference/training calculations used by neural networks are also well described by associative arrays. More surprisingly, a general denormalized form of hierarchical formats, such as XML and JSON, can be readily constructed. Finally, pivot tables, which are among the most widely used data analysis tools, naturally emerge from associative array constructors. A common founda- tion in associative arrays provides interoperability guarantees, proving that their operations are linear systems with rigorous mathematical properties, such as, associativity, commutativity, and distributivity that are critical to reordering optimizations.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>12:00-12:15</td>
+        <td>
+  <i>MIRIS: Optimizing Video Queries with Object Track Predicates</i><br/>
+  Favyen Bastani (MIT CSAIL)
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2D')">Click to toggle abstract.</a>
+          <div id="pa2D" class="abstract" style="display: none;">
+            <p>
+            Video databases enable efficient, automated analysis of video by executing expressive queries. In particular, video queries with object track predicates are useful in a wide range of applications, and include selecting objects that move from one region of the camera frame to another (e.g., find cars that turn right through a junction) and selecting objects with certain speeds (e.g., find animals that stop to drink water from a lake). However, these predicates also present new challenges, as they involve the movement of an object over several successive frames. We propose a novel query-driven tracking approach that integrates query processing with object tracking to efficiently process object track queries and address the computational complexity of object detection methods. By processing video at low framerates when possible, but increasing the framerate when needed to ensure high-accuracy on a query, our approach substantially speeds up query execution. We implement query-driven tracking in a video query processor that we call MIRIS, and compare MIRIS against four baselines on a diverse dataset consisting of five sources of video and nine distinct queries. We find that, at the same accuracy, MIRIS accelerates video query processing by as much as 17x over the overlap-based tracking-by-detection method.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>12:15-1:00</td>
+        <td><strong>Lunch Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 3:  </strong> Chair: Nesime Tatbul (MIT) </td>
+      </tr>
+
+     <tr>
+        <td>1:00-1:30</td>
+        <td><strong>Keynote 3: </strong>
+    Vasiliki (Vasia) Kalavri (Boston University) <i>From data stream management to distributed dataflows and beyond</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote3A')">Click to toggle abstract and bio.</a>
+          <div id="keynote3A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+             Recent efforts by academia and open-source communities have established stream processing as a principal data analysis technology across industry. All major cloud vendors offer streaming dataflow pipelines and online analytics as managed services. Notable use-cases include real-time fault detection in space networks, city traffic management, dynamic pricing for car-sharing, and anomaly detection in financial transactions. At the same time, streaming dataflow systems are increasingly being used for event-driven applications beyond analytics, such as orchestrating microservices and model serving. In the past decades, streaming technology has evolved significantly, however, emerging applications are once more challenging the design decisions of modern streaming systems. In this talk, I will discuss the evolution of stream processing and bring current trends and open problems to the attention of our community.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              Vasiliki (Vasia) Kalavri is an Assistant Professor at Boston University Department of Computer Science. She is working on distributed stream processing and large-scale graph analytics and she is a PMC member of Apache Flink. Before joining BU, Vasia was a postdoctoral fellow at ETH Zurich and received a joint PhD from KTH Stockholm and UCLouvain.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>1:30-1:45</td>
+        <td>
+		<i>Starling: How to Build a Query Engine on Cloud Functions</i> <br/>
+		Matthew J Perron (MIT), Raul Castro Fernandez (MIT), David DeWitt (MIT), Samuel Madden (MIT)
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3A')">Click to toggle abstract.</a>
+          <div id="pa3A" class="abstract" style="display: none;">
+            <p>
+              Much like on-premises systems, the natural choice for running database analytics workloads in the cloud is to provision a cluster of nodes to run a database instance. However, analytics workloads are often bursty or low volume, leaving clusters idle much of the time, meaning customers pay for compute resources even when unused. The ability of cloud function services, such as AWS Lambda or Azure Functions, to run small, fine granularity tasks make them appear to be a natural choice for query processing in such settings. But implementing an analytics system on cloud functions comes with its own set of challenges. These include managing hundreds of tiny stateless resource-constrained workers, handling stragglers, and shuffling data through opaque cloud services. In this paper we present GaggleDB, a query execution engine built on cloud function services that employs a number of techniques to mitigate these challenges, providing interactive query latency at a much lower total cost than provisioned systems with low-to-moderate utilization. In particular, on a 1TB TPC-H dataset in cloud object storage, GaggleDB is less expensive than the best provisioned systems for workloads when queries arrive 1 minute part or more on average. GaggleDB also has lower latency than competing systems reading from cloud object stores and can scale to much larger datasets.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>1:45-2:00</td>
+        <td>
+		 <i>Cosine: A Cloud-Cost Optimized NoSQL Storage Engine</i> <br/>
+		Subarna Chatterjee (Harvard University ), Wilson Qin (Harvard), Meena Jagadeesan (Harvard University), Aaron Kabcenell (Harvard), Stratos Idreos (Harvard)
+
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3B')">Click to toggle abstract.</a>
+          <div id="pa3B" class="abstract" style="display: none;">
+            <p>
+              We present a key-value storage engine, Cosine, that guarantees an optimal cost-performance trade-off, given a workload and a budget. Cosine creates a massive search space comprising of the entire data structure design and hardware- space of (LSM-tree/B-tree) key-value stores over diverse cloud pricing policies for the top three cloud providers – AWS, GCP, and Azure. To prune configurations from this massive search space, we present distribution-aware cost models that precisely estimate I/O costs of each possible data structure design, which in turn, helps in comparing pairs of designs. Using the cost models, Cosine reduces the massive dimensionality of the search space into a continuum of holistically optimal configurations. Cosine also enables decision makers in applications to quickly answer rich what-if questions about the changes in workload performance and cost as any of the design, hardware, or cloud provider change.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>2:00-2:20</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 4: Spotlight Talks  </strong>Chair: Wolfgang Gatterbauer (Northeastern University) </td>
+      </tr>
+
+      <tr>
+        <td>2:20-2:25</td>
+        <td>
+	<i>Evolving Big Data at Facebook</i><br/>
+	Maria Basmanova (Facebook), Orri Erling (Facebook)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5a')">Click to toggle abstract.</a>
+          <div id="pa5a" class="abstract" style="display: none;">
+            <p>
+              The Facebook Data Platform (Warehouse) handles all the mission critical big data at Facebook and holds exabytes of data across multiple data centers. Presto is the main interactive query engine and Spark is the main ETL/batch engine.  Additionally, Facebook has a number of in-house systems for stream processing, time series for operational data, in-memory analytics and real time query of aggregated ads statistics, to mention just a few. Beyond this, there are all the customer web-facing serving systems like TAO for graph caching and RocksDB for scalable key-value stores and MySQL backend.   In this talk we drill down on Presto efficiency advances, the limits of the Java platform and our work for next generation converged execution across multiple analytical data systems.   We see that Facebook scale data warehousing requires a holistic understanding of the space for overcoming the fragmentation and consequent maintenance burden that comes from multiple point solutions. We have presented some aspects of our answer to this challenge: - Aria: Do only the work that answering the business question requires - Folly4Data: Highest CPU efficiency and adaptivity for execution primitives, use in Presto and elsewhere, obtain consistent semantics, performance and user experience - Scalability: Adaptively handle resource allocation and workload placement. This stack of technologies will be open source and usable standalone or as part of PrestoDB. The Presto Foundation under Linux Foundation is the current Presto public facing entity. We welcome new members and participation in open source.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>2:25-2:30</td>
+        <td>
+	<i>Monitor Postgres for performance </i><br/>
+	Ajay Patel (EnterpriseDB )
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5b')">Click to toggle abstract.</a>
+          <div id="pa5b" class="abstract" style="display: none;">
+            <p>
+              Postgres is really easy and simple to install and use on various platforms cloud or on-premises. Monitoring is a key element of the Database eco-system and to the overall database performance. It also helps to ensure Database is healthy and contributes towards long term stability.  Monitoring sounds really easy but it becomes tricky on what to monitor and how to monitor?  On this session we are going to talk about:   1. Why is it important to monitor Postgres?  2. What are the proactive monitoring and reactive monitoring approaches, and how do they help in handling future problems?  3. Top 10 monitoring points.  4. When not to monitor?  5. Deep dive into Open Source tools for monitoring.  6. Deployment categories & Check list
+            </p>
+          </div>
+        </td>
+      </tr>
+
+        <tr>
+        <td>2:30-2:35</td>
+        <td> <i>A Generic RDBMS Schema for Property Graphs</i> <br/>
+    Christine F Reilly (Skidmore College)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5c')">Click to toggle abstract.</a>
+          <div id="pa5c" class="abstract" style="display: none;">
+            <p>
+            This talk describes on-going research focused on creating and evaluating a generic schema for storing property graphs in a relational database management system (RDBMS). We focus on transactional graph data, where there are updates (insertions, deletions, and modifications) to the data over time. We are motivated by related work that has demonstrated that an RDBMS performs as well as or better than a specialized graph system for graph analytics applications. This related work suggests that an RDBMS may be the preferred storage system for graph data, because RDBMSs are mature software systems that use well-tested approaches for reliable data storage. This talk will present the schema as implemented in MariaDB, and will discuss the design decisions made and challenges faced in the creation of this schema. The plan for evaluation of this approach and directions for future work will be discussed.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>2:35-2:40</td>
+        <td> <i>Lethe: A Delete-Aware LSM-Based Storage Engine</i> <br/>
+		Subhadeep Sarkar (Boston University), Dimitris Staratzis (Boston University), Tarikul Islam Papon (Boston University), Manos Athanassoulis (Boston University)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5d')">Click to toggle abstract.</a>
+          <div id="pa5d" class="abstract" style="display: none;">
+            <p>
+             To support fast ingestion and fast query processing, modern data stores handle incoming data in an out-of-place fashion. Deletes in such data stores are realized logically by inserting additional metadata. We highlight that all out-of-place data stores treat deletes as second class citizens, and are not designed to efficiently realize deletes without hurting performance. To address this, we introduce Lethe, a new delete-aware out-of-place key-value store.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>2:40-2:45</td>
+        <td> <i>Speeding up subgraph queries by constructing efficient intermediate structures</i> <br/>
+		sandeep polisetty (UMASS), Nathan Ng (University of Massachusetts Amherst), Marco Serafini (University of Massachusetts Amherst)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5e')">Click to toggle abstract.</a>
+          <div id="pa5e" class="abstract" style="display: none;">
+            <p>
+           	We study the problem of subgraph querying i.e finding instances of a given subgraph in a larger graph, a fundamental computation performed by many applications and supported by many software systems that process graphs. Example applications include triangles and larger clique-like structures for detecting related pages in the world wide web and finding diamonds in recommendation algorithms in social networks.  The underlying systems used by these applications could be graph databases, RDF engines or graph processing systems. These subgraph queries are typically evaluated one vertex at a time using the worst-case optimal generic joins.  Worst-case optimal joins heavily use set intersections which are sensitive to branch mispredictions.  These branches do not allow for proper utilization of SIMD acceleration.  However unlike SQL queries on multiple tables, graph queries consist of joins on the same table.  This repetitive structure of graph queries allows the existence of reusable intermediate structures.  We propose a novel bitvector to store these reusable structures in a SIMD friendly format which can later be processed rapidly using SIMD without any branches.  Our experiments show that we can achieve a reduction in branch misprediction by 50 percent and a speedup of 2-4x for n-clique queries
+            </p>
+          </div>
+        </td>
+      </tr>
+
+        <tr>
+        <td>2:45-2:50</td>
+        <td> <i>Toward Agile Harmonization of Specifications</i> <br/>
+    Arnon Rosenthal (MITRE), Catherine Macheret (MITRE), Peter Mork (MITRE), Adriane Chapman (U Southampton, UK)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5f')">Click to toggle abstract.</a>
+          <div id="pa5f" class="abstract" style="display: none;">
+            <p>
+            Systems interoperate more effectively when different components employ similar data definitions. To achieve this, one needs to harmonize the systems’ specifications. This need arises not just with databases, but also with ontologies, survey instruments, GUIs, statistical queries, and other information conveyances describable by metadata structures. The database community employs two complementary approaches to harmonization: data standardization (for new and evolving systems and interfaces) and data integration/mapping (for systems and interfaces one cannot change). This talk has several objectives for advancing these approaches: 1. Propose harmonization as a general problem in a way that facilitates the transition of data integration lore into practice, on problems requiring harmonizing structured metadata. 2. Describe some surprising shortfalls in the state of the practice for metadata and data standards 3. Discuss how agile harmonization might be achieved, by adding decentralized, time-limited, bottom-up capabilities to the standards and harmonization armory We then describe questions where research progress might mitigate these difficulties.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+    <tr>
+                <td>2:50-2:55</td>
+        <td> <i>Learning to Multiplex Simple Query Optimizers</i> <br/>
+    Ryan C Marcus (MIT), Tim Kraska (MIT)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5g')">Click to toggle abstract.</a>
+          <div id="pa5g" class="abstract" style="display: none;">
+            <p>
+            Modern machine-learning based solutions to query optimization (e.g., learned cardinality estimators, reinforcement learning, etc.) suffer from large training data requirements, poor tail latency, and inevitable staleness as the data and schema shift. We propose a new class of learned optimizers based on multiplexing simple query optimizers in a contextual multi-armed bandit setting. We show preliminary results suggesting that such an approach could learn to outperform traditional query optimizers with very little training data, while never producing a catastrophic query plan. We are hopeful that structural properties of our proposed system will allow it to easily adapt to changes in data and schema.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+          <tr>
+        <td>2:55-3:00</td>
+        <td> <i>Stochastic Package Queries for In-Database Constrained Optimization Under Uncertainty</i> <br/>
+    Matteo Brucato (UMass Amherst), Nishant  Yadav (University of Massachusetts Amherst), Azza Abouzied (New York University Abu Dhabi), Peter Haas (University of Massachusetts Amherst), Alexandra Meliou (University of Massachusetts Amherst)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5h')">Click to toggle abstract.</a>
+          <div id="pa5h" class="abstract" style="display: none;">
+            <p>
+            In this talk, we introduce methods for in-database support of constrained optimization under uncertainty. Many important decision problems correspond to selecting a ``package'' (bag of tuples in a relational database) in order to jointly satisfy a set of constraints (expressed as predicates) while minimizing some overall ``cost'' function; in most real-world problems, the data is uncertain. We provide methods for specifying---via a SQL extension---and processing stochastic package queries (SPQs). SPQs model optimization problems with uncertainty, and let users express and solve these problems inside the database system. In order to handle a broad class of uncertainty models, prior work by the stochastic programming community uses Monte Carlo methods where the original stochastic optimization problem is approximated by a large deterministic optimization problem that incorporates many ``scenarios'', i.e., sample realizations of the uncertain data values. For large database tables, however, a huge number of scenarios is required, leading to poor performance and, often, failure of the solver software. We therefore provide a novel SummarySearch algorithm that, instead of trying to solve a large deterministic problem, seamlessly approximates it via a sequence of problems defined over carefully crafted ``summaries'' of the scenarios that accelerate convergence to a feasible and near-optimal solution. Experimental results on our prototype system show that SummarySearch can be orders of magnitude faster than prior methods at finding feasible and high-quality packages.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:00-3:05</td>
+        <td>
+  <i>Workload-Dependent Filtering</i> <br/>
+    Brian  Hentschel (Harvard University), Stratos Idreos Harvard)
+
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5i')">Click to toggle abstract.</a>
+          <div id="pa5i" class="abstract" style="display: none;">
+            <p>
+              Filters are memory-efficient data structures that are computationally efficient and which give partial answers to queries or defer answers to a secondary more complete source of the data. Evaluating true false predicates efficiently is a key component of general program execution, machine learning, and in finding relevant data to problems. We examine here techniques for finding computational surrogates for a given question, in which the expected execution time of predicate evaluation is reduced by creating a computationally cheaper surrogate which resolves the predicate for certain input cases, and which relays the predicate to the a more expensive oracle evaluation for others. This work encompasses creating more performant methods for known surrogates such as better Bloom Filters for the set membership question, but also novel methods for surrogates over stored datasets.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+ <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>3:05-3:25</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+        <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+ <tr class="success">
+        <td colspan="2" align="center"><strong>Entrepreneurship Session</strong> Chair: Stratos Idreos (Harvard) </td>
+      </tr>
+
+      <tr>
+        <td>3:25-3:30</td>
+        <td>
+  <i>Robust Intelligence, www.robustintelligence.com </i><br/>
+  Yaron Singer (Harvard)
+                    <br/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:30-3:35</td>
+        <td>
+  <i>Einblick Analytics, http://www.einblick.ai </i><br/>
+  Tim Kraska (MIT)
+                    <br/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:35-3:40</td>
+        <td>
+  <i>TileDB, https://tiledb.com </i><br/>
+  Stavros Papadopoulos
+                    <br/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:40-3:45</td>
+        <td>
+  <i>Cambridge Mobile Telematics, https://www.cmtelematics.com </i><br/>
+  Sam Madden (MIT)
+                    <br/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:45-3:50</td>
+        <td>
+  <i>Integral</i><br/>
+  David Adams
+                    <br/>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>3:50-3:55</td>
+        <td>
+  <i>Pillar VC, https://www.pillar.vc </i><br/>
+  Parker McKee
+                    <br/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:55-4:10</td>
+        <td>
+  <i> </i><br/>
+  Mike Stonebraker (MIT)
+                    <br/>
+        </td>
+      </tr>
+
+
+
+  <tr class="success">
+        <td colspan="2" align="center"><strong>Poster Session</strong></td>
+      </tr>
+
+
+      <tr>
+        <td>4:10-4:30</td>
+        <td>Setting up posters</td>
+      </tr>
+      <tr>
+        <td>4:30 - 5:30</td>
+        <td><a href="#posters"><strong>Poster Session</strong></a> and Appetizers / Drinks</td>
+      </tr>
+
+       <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+  <tr class="success">
+        <td colspan="2" align="center"><strong>End Of Official Program</strong></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
