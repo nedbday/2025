@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://nedbday.github.io/2025</loc>
+    <lastmod>2024-12-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nedbday.github.io/2025/#keynote</loc>
+    <lastmod>2024-12-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nedbday.github.io/2025/#program</loc>
+    <lastmod>2024-12-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nedbday.github.io/2025/#posters</loc>
+    <lastmod>2024-12-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nedbday.github.io/2025/#photos</loc>
+    <lastmod>2024-12-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
