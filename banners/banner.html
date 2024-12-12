@@ -2,81 +2,109 @@
 <html>
 
 <head>
-<title>North East Database Day, 2024</title>
-<script src="./js/jquery-2.0.2.js"></script>
-<script src="./js/underscore.js"></script>
-<script src="./js/backbone.js"></script>
-<script src="./js/backbone.marionette.js"></script>
-<script src="./js/bootstrap.js"></script>
-<link href="./css/bootstrap.css" rel="stylesheet">
-<link href="./css/font-awesome.css" rel="stylesheet">
-<link href="./css/application.css" rel="stylesheet">
-</head>
-<body>
-    <div class="row">
-      <div class="col-sm-3 " id="nav" role="navigation">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Welcome to the 15th Annual North East Database Day (NEDB Day) 2025, featuring keynotes, talks, and posters on data-intensive systems and analytics. Join us at Brandeis University on January 9, 2025.">
+  <meta name="keywords"
+    content="North East Database Day, NEDBDay 2025, database conference, data management, analytics, Brandeis University, keynotes, research conference">
 
-        <style>
+  <meta property="og:title" content="North East Database Day 2025">
+  <meta property="og:description"
+    content="Discover data-intensive systems, analytics, and more at the 15th Annual NEDBDay on January 9, 2025, at Brandeis University.">
+  <meta property="og:image" content="https://nedbday.github.io/2025/images/newengland.jpg">
+  <meta property="og:url" content="https://nedbday.github.io/2025">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="https://nedbday.github.io/2025/images/newengland.jpg">
+  <meta name="twitter:title" content="North East Database Day 2025">
+  <meta name="twitter:description"
+    content="Join us at NEDBDay 2025 for keynotes, talks, and posters on data-intensive systems and analytics. January 9, 2025, at Brandeis University.">
+  <meta name="twitter:image" content="https://nedbday.github.io/2025/images/newengland.jpg">
+  <meta name="twitter:url" content="https://nedbday.github.io/2025">
+
+  <meta name="google-site-verification" content="2ysQ_IJiv8434RwiszFTv5NOYCNbfsLA6moGWkaCEYs" />
+
+  <title>North East Database Day, 2024</title>
+  <script src="./js/jquery-2.0.2.js"></script>
+  <script src="./js/underscore.js"></script>
+  <script src="./js/backbone.js"></script>
+  <script src="./js/backbone.marionette.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <link href="./css/bootstrap.css" rel="stylesheet">
+  <link href="./css/font-awesome.css" rel="stylesheet">
+  <link href="./css/application.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-sm-3 " id="nav" role="navigation">
+
+      <style>
         /* collapsed sidebar styles */
         @media screen and (max-width: 850px) {
 
-            #sidbar {
-              width: 100%;
-            }
-            #logocontainer {
-              /*float: left;*/
-              display:block;
-              padding-top: .5em;
-              width: 700px;
-            }
-            #logo {
-              width: 100%;
-              background-size: contain;
-            }
-            #nedbday {
+          #sidbar {
+            width: 100%;
+          }
+
+          #logocontainer {
+            /*float: left;*/
+            display: block;
+            padding-top: .5em;
+            width: 700px;
+          }
+
+          #logo {
+            width: 100%;
+            background-size: contain;
+          }
+
+          #nedbday {
             font-weight: bold;
-              font-size: 27pt;
-              line-height: 90%;
-              color: black;
-              font-family: "Josefin Sans", Sahitya, Raleway, Gill Sans;
-              padding-top: 4.5em;
-              }
+            font-size: 27pt;
+            line-height: 90%;
+            color: black;
+            font-family: "Josefin Sans", Sahitya, Raleway, Gill Sans;
+            padding-top: 4.5em;
+          }
 
 
         }
-        </style>
+      </style>
 
 
-<!-- sidebar -->
-<ul class="sidebar">
-   <a href="#" id="logocontainer">
-    <div id="logo" >
-    </div>
-    </a>
-    <div id="nedbday">NEDB Day</div>
+      <!-- sidebar -->
+      <ul class="sidebar">
+        <a href="#" id="logocontainer">
+          <div id="logo">
+          </div>
+        </a>
+        <div id="nedbday">NEDB Day</div>
 
-   <!--<p style="margin: 0px; font-size: 12pt;">North East Database Day</p>-->
-   <p style="margin: 0px; font-size: 29pt;">North East</p>
-   <p style="margin: 0px; font-size: 22pt; margin-top: -10px;">Database Day</p>
-   <!--
+        <!--<p style="margin: 0px; font-size: 12pt;">North East Database Day</p>-->
+        <p style="margin: 0px; font-size: 29pt;">North East</p>
+        <p style="margin: 0px; font-size: 22pt; margin-top: -10px;">Database Day</p>
+        <!--
    <li class="active home"><a href="#">Some Text</a> <div>and more text</div></li>
    <li class="active home"><a href="#">Some Text</a> <div>and more text here</div></li>
    <li class="active home"><a href="#">Some Text</a> <div>and even more text</div></li>
    -->
-</ul>
-<style>
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-@import url(https://fonts.googleapis.com/css?family=Sahitya:400,700);
-</style>
+      </ul>
+      <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+        @import url(https://fonts.googleapis.com/css?family=Sahitya:400,700);
+      </style>
 
 
 
 
-      </div>
-        <div class="col-sm-9">
-            <div id="content"></div>
-        </div>
     </div>
+    <div class="col-sm-9">
+      <div id="content"></div>
+    </div>
+  </div>
 </body>
+
 </html>
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
