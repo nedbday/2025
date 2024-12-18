@@ -62,19 +62,39 @@
 	<br />
 
 	<div class="page-content">
-		<h2>2) Databases in the Age of AI: Architecting for Search with Speed and Scale
+		<h2>2) Databases in the Age of AI: Architecting for Model-Training, Fine-Tuning and Inference
 			<p><a href="https://www.borthakur.com/dhruba_borthakur" target="_blank">Dhruba Borthakur</a> &nbsp;
 				<small>Open AI</small>
 			</p>
 		</h2>
 		<h3>Abstract</h3>
-		<!--p>
-			This talk will take an in depth look at the architecture of InfluxDB 3, a distributed real-time, time series
-			database that uses object store as its historical durability layer. I'll cover the specific components and
-			design considerations on separating ingestion from compaction from query workloads. We'll also look at some
-			of the challenges encountered when building a database on top of object storage that requires sub-second
-			query response times with immediate read-your-writes capability.
-		</p-->
+		<p>
+			In this talk, Dhruba describes the rapidfire evolution of AI’s relationship with databases: starting with
+			Retrieval Augmented Generation (RAG) techniques and then moving onto fine-tuning and more recently to
+			model-tool-invocations at inference time. This talk describes how a database is used in Training,
+			Fine-tuning and Agentic-Tool calling. Reasoning models have arrived and these models stop, think and then
+			act. The thinking process is not just computation but also a lot of data processing. What can databases do
+			to make this thinking process efficient?
+
+			RAG applications need retrieval features including Vector Search, BM25 and text search. Dhruba describes how
+			these are implemented in Rockset, one of the first databases to scale retrieval on petabayte size datasets.
+			He talks about the Converged Indexing mechanism that builds indices using the open source RocksDB storage
+			engine. He describes Rockset’s vector Search & hybrid search implementation at scale.
+
+			Most AI models are running 24x7, which means that new data to a database never stops and queries never stop.
+			Dhruba lays out the design of the Aggregator-Leaf-Tailer (ALT) architecture that does a three-way
+			disaggregation of read-compute, write-compute and storage. He describes how Rockset uses the ALT
+			architecture to rebuild retrieval indices online without impacting query latencies.
+
+			With the advent of a model’s ability to invoke tools via function-calling, database query volumes are
+			predicted to move even higher. A reasoning model accesses the database multiple times at inference time.
+			This is a high-qps & lo- latency retrieval queries; Dhruba describes how Rockset’s scatter-gather query
+			engine is primarily optimized for low latency compared to other databases that optimize for query
+			throughput. He describes Rockset’s Leader-Follower approach to scaling queries to thousands of qps.
+
+			Dhruba concludes the talk by describing a few examples of how Rockset can power AI use-cases like
+			multi-modal-file-uploads, conversation-search and model distillation.
+		</p>
 		<h3>Bio</h3>
 		<p style="float: left;"> <img src="./images/dhruba.jpg" height="auto" width="120px" border="1px"> </p>
 		<p>
