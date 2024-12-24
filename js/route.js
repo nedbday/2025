@@ -1,5 +1,3 @@
-import REGISTER_REDIRECT_LINK from "./custom";
-
 ApplicationRouter = Backbone.Marionette.AppRouter.extend({
 	routes: {
 		"": "home",
@@ -62,7 +60,8 @@ ApplicationRouter = Backbone.Marionette.AppRouter.extend({
 		this.selectPill('ul.sidebar li.history');
 		MyApp.contentRegion.show(new ContentHistoryView());
 	},
+	
     register: function () {
-        window.location.href = REGISTER_REDIRECT_LINK.registerRedirectUrl;
+        window.location.href = window.REGISTER_REDIRECT_LINK.registerRedirectUrl;
     }
 });
