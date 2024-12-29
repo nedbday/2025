@@ -96,13 +96,13 @@
           <div id="pa1A" class="abstract" style="display: none;">
             <p>
               Intermixing opaque user defined functions (UDF) with query answering has become an important workload
-              forperforming data science on unstructured text, images, and tabular data [9]. An opaque UDF is a
+              forperforming data science on unstructured text, images, and tabular data . An opaque UDF is a
               black-box function whose semantics and internal structurenor its scores on the database are available a
               priori. These UDFs are typically written in conventional programming languages, andincreasingly involve
-              machine learning models [5, 9, 10, 21]. They are invoked in stand-alone code bases[12, 13, 21] or
-              intermixed with SQLqueries [1, 5, 10, 12, 13, 19]. Recently, He et al. studied opaque filter queries –
-              queries that invoke UDFs for selecting database elements [12]and may even limit the result size as users
-              navigate massive databases [13]. For example, a web content creator might be interested infiltering
+              machine learning models . They are invoked in stand-alone code bases or
+              intermixed with SQLqueries . Recently, He et al. studied opaque filter queries –
+              queries that invoke UDFs for selecting database elements and may even limit the result size as users
+              navigate massive databases . For example, a web content creator might be interested infiltering
               reviews with a positive sentiment from a product database crawled from the Web. Or, for debugging
               purposes, a
               driving car engineer may need to retrieve 100 images capturing pedestrians from a large video
@@ -117,26 +117,26 @@
               SELECT* FROM vehicleListings ORDER BY ValuationUDF(listing) LIMIT 100;
               <br>
               Traditional top-𝑘 query answering literature generally assumes certain properties on scoring functions
-              [8, 15]. For example, the family of Threshold Algorithm (TA) variants typically assume that the scoring
-              function is a monotone aggregate [3, 7, 8, 15, 18]. Another class of scoring functions is similarity
-              functions, such as inner product [17]. Arbitrary UDFs, however, pose fundamental challenges to top-𝑘
+              . For example, the family of Threshold Algorithm (TA) variants typically assume that the scoring
+              function is a monotone aggregate . Another class of scoring functions is similarity
+              functions, such as inner product . Arbitrary UDFs, however, pose fundamental challenges to top-𝑘
               query evaluation. First, they may be difficult to analyze, as they involve imperative programming
-              languages and ML models. Existing methods increase programmer burden [21] or limit the scope [11] in order
+              languages and ML models. Existing methods increase programmer burden  or limit the scope  in order
               to expose the internals of the UDF to the compiler. Second, they may be expensive to run—foundation models
-              are the extreme case [5, 16]. Hence, an exhaustive scan is not attractive. Third, the scores given by the
-              function may change over time, if the scoring function is a continually learning model [6] or if the score
+              are the extreme case . Hence, an exhaustive scan is not attractive. Third, the scores given by the
+              function may change over time, if the scoring function is a continually learning model  or if the score
               depends on some external factor, like a user-specified label. As such, it is hard to build a sorted index
-              over the elements’ scores or apply the existing approximate nearest neighbor search techniques [22].
+              over the elements’ scores or apply the existing approximate nearest neighbor search techniques .
               Conventional data engines such as Spark or PostgreSQL treat UDFs as a black box, and will execute the UDF
-              exhaustively on all data points [4, 12]. This is not viable when the search domain is very large, each
+              exhaustively on all data points . This is not viable when the search domain is very large, each
               invocation of the model is costly, or the user does not necessarily need the exact top-𝑘 solution. Taking
               a sample of the search domain is a viable option, but degrades in quality quickly when only a small subset
               of the elements have high scores. Uniform sampling, in the worst case, requires a sample size of 𝑛(1−𝜀),
               where 𝑛 is the number of data points and 𝜀 is approximation tolerance. Nearest-neighbor style similarity
               search is specialized for a subset of functions, like similarity functions.
               Recently, a body of work studied how to statistically optimize opaque UDF queries. However, existing
-              methods are limited to other types of queries, such as feature engineering [1], selection queries [5, 12],
-              aggregation queries [5], and queries with partially obscured predicates [19]. To the best of our
+              methods are limited to other types of queries, such as feature engineering , selection queries ,
+              aggregation queries , and queries with partially obscured predicates . To the best of our
               knowledge, no prior work studied statistical optimization for opaque top-𝑘 queries. A method for
               approximate opaque top-𝑘 query execution has to balance conflicting objectives. It should be applicable
               across a wide variety of opaque scoring functions. It should not incur significant execution-time overhead
@@ -147,14 +147,14 @@
               tree index hierarchically clusters data at preprocessing time before any opaque top-𝑘 queries. Each leaf
               cluster allows for efficient random sampling during query execution. The bandit algorithm statistically
               optimizes the number of UDF function calls by learning the distribution of scores over the index. We adopt
-              the VOODOO index from [12]. This index vectorizes each element using a cheap heuristic, applies 𝑘-means
+              the VOODOO index from . This index vectorizes each element using a cheap heuristic, applies 𝑘-means
               clustering to the vectors, and then performs agglomerative clustering on the cluster centroids.
               Our main technical contribution is the query execution algorithm. We abstract the problem of sampling over
               a collection of heterogeneous clusters for top-𝑘queries as a stochastic DR-submodular bandit problem [2,
               20]. In this problem setting, there are three classes of algorithms: offline, non-adaptive, and adaptive.
               The optimal offline algorithm is the theoretical best-case scan when the insertion order of the data is
               ideal. Adaptive algorithms change their behavior based on the realizations of the random samples;
-              non-adaptive algorithms do not. Prior work established gaps between the three classes [2, 14]. We design
+              non-adaptive algorithms do not. Prior work established gaps between the three classes . We design
               an algorithm that performs close to the optimal adaptive, as illustrated in Figure 2.
             </p>
           </div>
@@ -185,10 +185,10 @@
               This optimal partitioning strategy has a high memory cost, thus, we further derive an approximate
               algorithm that has tunable memory cost and leads to near-optimal results. Our algorithm, termed NOCAP
               (Near-Optimal Correlation-Aware Partitioning) join, outperforms the state-of-the-art for skewed
-              correlations by up to $30\%$, and the textbook Grace Hash Join by up to $4\times$. Further, for a limited
-              memory budget, NOCAP outperforms HHJ by up to $10\%$, even for uniform correlation. Overall, NOCAP
+              correlations by up to 30 %, and the textbook Grace Hash Join by up to 4 times. Further, for a limited
+              memory budget, NOCAP outperforms HHJ by up to 10 %, even for uniform correlation. Overall, NOCAP
               dominates state-of-the-art algorithms and mimics the best algorithm for a memory budget varying from below
-              $\sqrt{\|\text{relation}\|}$ to more than $\|\text{relation}\|$.
+              sqrt(||relation||) to more than ||relation||.
             </p>
           </div>
         </td>
@@ -410,8 +410,8 @@
             target="_blank">[Poster]</a> -->
           <br>
           Jeff Fried (InterSystems)* <br>
-          <a href="javascript: toggleVisibility ('#pa2E')">Click to toggle abstract.</a>
-          <div id="pa2E" class="abstract" style="display: none;">
+          <a href="javascript: toggleVisibility ('#pa2F')">Click to toggle abstract.</a>
+          <div id="pa2F" class="abstract" style="display: none;">
             <p>
               This paper introduces an advanced implementation of an integrated vector database grounded in a
               ""Post-Relational"" architectural approach. The resulting system is inherently multi-model and achieves
@@ -732,7 +732,7 @@
           <div id="pa3D" class="abstract" style="display: none;">
             <p>
               This talk will present highlights of our work on understanding and explaining rankings and top-𝑘 query
-              results. It is based on our VLDB 2023 paper and recent extensions [2, 3]. We study questions like: Given a
+              results. It is based on our VLDB 2023 paper and recent extensions . We study questions like: Given a
               ranking, what is the most accurate and “sufficiently simple” explanation of how it was obtained? Can we
               efficiently synthesize the corresponding scoring functions for large datasets? And if the position of some
               entity of interest is lower than expected, are there large classes of (reasonable) scoring functions that
@@ -755,8 +755,8 @@
           Robert Soulé (Yale University)*; George Neville-Neil (Yale University); Stelios Kasouridis (Yale University);
           Alex Yuan (Yale University); Avi Silberschatz (Yale University); Peter Alvaro (UC Santa Cruz)
           <br>
-          <a href="javascript: toggleVisibility ('#pa3D')">Click to toggle abstract.</a>
-          <div id="pa3D" class="abstract" style="display: none;">
+          <a href="javascript: toggleVisibility ('#pa3C')">Click to toggle abstract.</a>
+          <div id="pa3C" class="abstract" style="display: none;">
             <p>
               Operating systems must provide functionality that closely resembles that of a data management system, but
               existing query mechanisms are ad-hoc and idiosyncratic. To address this problem, we argue for the adoption
