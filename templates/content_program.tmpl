@@ -330,35 +330,23 @@
       <tr>
         <td>11:30 - 11:45</td>
         <td>
-          <i>Mind the Data Gap: Bridging LLMs to Enterprise Data Integration</i>
-          <br>
-          Moe Kayali (University of Washington)*; Fabian Wenz (TU Munich and MIT); Peter Baile Chen (MIT); Nesime Tatbul
-          (Intel Labs and MIT); Çağatay Demiralp (AWS AI Labs and MIT); Michael Stonebraker (MIT CSAIL)
-          <!-- <a href="download/slides/Split-Parallel_Graph_Neural_Network_Training_SandeepPolisetty.pdf"
-            target="_blank">[Slides]</a> <a href="download/posters/Split-Parallel_Graph_Neural_Network_Training.pdf"
+          <i>Supporting Vector Search in Relational Databases for Advanced RAGs</i>
+          <!-- <a href="download/slides/Towards_an_Industry-Scale_Feature_Engineering_Benchmark_AbdulWasay.pdf"
+            target="_blank">[Slides]</a> <a
+            href="download/posters/Towards_an_Industry-Scale_Feature_Engineering_Benchmark.pdf"
             target="_blank">[Poster]</a> -->
           <br>
-          <a href="javascript: toggleVisibility ('#pa2D')">Click to toggle abstract.</a>
-          <div id="pa2D" class="abstract" style="display: none;">
+          Jianguo Wang (Purdue University)*
+          <br>
+          <a href="javascript: toggleVisibility ('#pa3B')">Click to toggle abstract.</a>
+          <div id="pa3B" class="abstract" style="display: none;">
             <p>
-              We propose a talk about the limitations of applying large-language models (LLMs) to enterprise data. We
-              focus on the data integration task. The talk will start by contrasting the reported state-of-the-art
-              results in academia with reports of poor performance from industry. To quantify this, we introduce a new
-              benchmark of enterprise data, which we call \textit{Goby}. This is a data integration benchmark composed
-              of real enterprise data from a corporate partner. We describe Goby and show that when applying LLM-based
-              data integration approaches from the literature on Goby, we measure a noticeable gap in performance
-              compared to public datasets. This validates the public-enterprise performance gap, hence the title of the
-              talk.
-
-              Next, we present candidate reasons for this performance gap, in particular differing data granularity, as
-              well as domain-specific jargon. We propose three technical mitigations: hierarchical annotation, runtime
-              class-learning, and ontology synthesis. We evaluate these approaches and show that they close a sizable
-              portion of the public-enterprise performance gap. Finally, we also discuss parallel efforts by the team in
-              this area, using query history to improve enterprise performance and developing an interactive annotation
-              system to accelerate enterprise benchmark creation.
-
-              This talk is based on a paper to appear at CIDR 2025. The Goby benchmark can be obtained at
-              https://goby-benchmark.github.io/
+              Vector databases have recently gained significant attention with the emergence of large language models
+              that generate vector embeddings for text. While specialized vector databases are appealing, there is a
+              substantial customer base interested in supporting vector search within relational databases for various
+              reasons, such as reluctance to move data out of relational databases to reduce data silos and costs, the
+              desire to use SQL, and the need for more sophisticated query processing of both vector and non-vector
+              data. In this talk, I will share our experience in integrating vector search within relational databases.
             </p>
           </div>
         </td>
@@ -692,26 +680,39 @@
       <tr>
         <td>3:30 - 3:45</td>
         <td>
-          <i>Supporting Vector Search in Relational Databases for Advanced RAGs</i>
-          <!-- <a href="download/slides/Towards_an_Industry-Scale_Feature_Engineering_Benchmark_AbdulWasay.pdf"
-            target="_blank">[Slides]</a> <a
-            href="download/posters/Towards_an_Industry-Scale_Feature_Engineering_Benchmark.pdf"
+          <i>Mind the Data Gap: Bridging LLMs to Enterprise Data Integration</i>
+          <br>
+          Moe Kayali (University of Washington)*; Fabian Wenz (TU Munich and MIT); Peter Baile Chen (MIT); Nesime Tatbul
+          (Intel Labs and MIT); Çağatay Demiralp (AWS AI Labs and MIT); Michael Stonebraker (MIT CSAIL)
+          <!-- <a href="download/slides/Split-Parallel_Graph_Neural_Network_Training_SandeepPolisetty.pdf"
+            target="_blank">[Slides]</a> <a href="download/posters/Split-Parallel_Graph_Neural_Network_Training.pdf"
             target="_blank">[Poster]</a> -->
           <br>
-          Jianguo Wang (Purdue University)*
-          <br>
-          <a href="javascript: toggleVisibility ('#pa3B')">Click to toggle abstract.</a>
-          <div id="pa3B" class="abstract" style="display: none;">
+          <a href="javascript: toggleVisibility ('#pa2D')">Click to toggle abstract.</a>
+          <div id="pa2D" class="abstract" style="display: none;">
             <p>
-              Vector databases have recently gained significant attention with the emergence of large language models
-              that generate vector embeddings for text. While specialized vector databases are appealing, there is a
-              substantial customer base interested in supporting vector search within relational databases for various
-              reasons, such as reluctance to move data out of relational databases to reduce data silos and costs, the
-              desire to use SQL, and the need for more sophisticated query processing of both vector and non-vector
-              data. In this talk, I will share our experience in integrating vector search within relational databases.
+              We propose a talk about the limitations of applying large-language models (LLMs) to enterprise data. We
+              focus on the data integration task. The talk will start by contrasting the reported state-of-the-art
+              results in academia with reports of poor performance from industry. To quantify this, we introduce a new
+              benchmark of enterprise data, which we call \textit{Goby}. This is a data integration benchmark composed
+              of real enterprise data from a corporate partner. We describe Goby and show that when applying LLM-based
+              data integration approaches from the literature on Goby, we measure a noticeable gap in performance
+              compared to public datasets. This validates the public-enterprise performance gap, hence the title of the
+              talk.
+
+              Next, we present candidate reasons for this performance gap, in particular differing data granularity, as
+              well as domain-specific jargon. We propose three technical mitigations: hierarchical annotation, runtime
+              class-learning, and ontology synthesis. We evaluate these approaches and show that they close a sizable
+              portion of the public-enterprise performance gap. Finally, we also discuss parallel efforts by the team in
+              this area, using query history to improve enterprise performance and developing an interactive annotation
+              system to accelerate enterprise benchmark creation.
+
+              This talk is based on a paper to appear at CIDR 2025. The Goby benchmark can be obtained at
+              https://goby-benchmark.github.io/
             </p>
           </div>
         </td>
+
       </tr>
 
 
