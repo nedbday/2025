@@ -45,14 +45,16 @@
       </tr>
 
       <tr class="success">
-        <td colspan="2" align="center"><strong>Session 1: Query Optimization in Modern Databases</strong><br>Chair: Andy Hyunh (Boston University)
+        <td colspan="2" align="center"><strong>Session 1: Query Optimization in Modern Databases</strong><br>Chair: Andy
+          Hyunh (Boston University)
         </td>
       </tr>
 
       <tr>
         <td>9:00 - 9:30</td>
         <td>
-          <strong>Keynote 1</strong>: Jake Luciani (DataStax) <br><i>Patterns and Principles of Serverless Data Systems</i>
+          <strong>Keynote 1</strong>: Jake Luciani (DataStax) <br><i>Patterns and Principles of Serverless Data
+            Systems</i>
           <!-- <a href="download/slides/TileDB_Adaptive_Intelligence_StavrosPapadopoulos.pdf" target="_blank">[Slides]</a> -->
           <br>
           <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
@@ -121,10 +123,10 @@
               function is a monotone aggregate . Another class of scoring functions is similarity
               functions, such as inner product . Arbitrary UDFs, however, pose fundamental challenges to top-𝑘
               query evaluation. First, they may be difficult to analyze, as they involve imperative programming
-              languages and ML models. Existing methods increase programmer burden  or limit the scope  in order
+              languages and ML models. Existing methods increase programmer burden or limit the scope in order
               to expose the internals of the UDF to the compiler. Second, they may be expensive to run—foundation models
               are the extreme case . Hence, an exhaustive scan is not attractive. Third, the scores given by the
-              function may change over time, if the scoring function is a continually learning model  or if the score
+              function may change over time, if the scoring function is a continually learning model or if the score
               depends on some external factor, like a user-specified label. As such, it is hard to build a sorted index
               over the elements’ scores or apply the existing approximate nearest neighbor search techniques .
               Conventional data engines such as Spark or PostgreSQL treat UDFs as a black box, and will execute the UDF
@@ -229,7 +231,8 @@
 
 
       <tr class="success">
-        <td colspan="2" align="center"><strong>Session 2: AI for Systems & Systems for AI</strong><br>Chair: Prashant Pandey (NEU)</td>
+        <td colspan="2" align="center"><strong>Session 2: AI for Systems & Systems for AI</strong><br>Chair: Prashant
+          Pandey (NEU)</td>
       </tr>
 
       <tr>
@@ -367,22 +370,13 @@
           <a href="javascript: toggleVisibility ('#pa2E')">Click to toggle abstract.</a>
           <div id="pa2E" class="abstract" style="display: none;">
             <p>
-              In this talk, we will present our work on VectraFlow, a new data-flow engine designed to seamlessly
-              integrate modern ML models with an extended relational framework for unstructured and multi-modal data
-              processing. VectraFlow extends the relational model by introducing advanced semantic operations (based on
-              vectors, LLM prompts, and general ML models), offering support for diverse AI-driven applications. With
-              its unified execution model, VectraFlow enables both real-time streaming and batch processing, making it
-              ideal for use cases such as continuous and agentic prompts, real-time copyright infringement detection,
-              and event detection in live video streams.
-
-              We will describe VectraFlow’s design and architecture, focusing on its execution model, semantic
-              operations, and optimizations for processing vectors and prompt-based tasks in a streaming context.
-              Additionally, we will highlight our ongoing efforts to incorporate advanced features including guardrails
-              and access control mechanisms to mitigate AI reliability issues and prevent data leakage, an essential
-              priority in domains where correctness and data privacy are of utmost concern. The talk will also include a
-              brief demo of the VectraFlow prototype.
-
-              This talk is based on our recent paper, which will appear in CIDR 2025.
+              This talk will provide an overview of VectraFlow, a new data-flow system designed to seamlessly integrate
+              modern ML models with an extended relational framework and advanced semantic operators for unstructured
+              and multi-modal data processing. With its unified execution model, VectraFlow enables both real-time
+              streaming and batch processing, making it a versatile solution for a diverse range of AI-augmented
+              applications. We will describe the core VectraFlow model, highlighting its novel vector-based operators
+              and reliability features. We will also demonstrate use cases from the medical domain to showcase its
+              practical utility. This talk is partly based on our CIDR’25 paper.
             </p>
           </div>
         </td>
@@ -548,8 +542,7 @@
         <td>2:00 - 2:15</td>
         <td>
           <i>Cleaning Huge Anomaly-Polluted Log Data Sets Using Sample Selection</i>
-          <a href="download/slides/Pluto_NEDB_slides.pdf"
-            target="_blank">[Slides]</a>
+          <a href="download/slides/Pluto_NEDB_slides.pdf" target="_blank">[Slides]</a>
           <a href="download/posters/pluto_24x36_poster.pdf" target="_blank">[Poster]</a>
           <br>
           Lei Ma (WPI)*; Lei Cao (University of Arizona); Peter VanNostrand (Worcester Polytechnique Institute); Dennis
@@ -562,14 +555,10 @@
               Current log anomaly detection methods rely on deep learning models trained on clean anomaly-free data,
               which requires costly manual labeling. To address this, given a polluted (unlabeled with anomalies) log
               sequence dataset, we propose Pluto, a robust framework that selects a clean subset from polluted log data
-              to train a Transformer-based anomaly detection model. By utilizing the embedding space, Pluto efficiently
+              to train a Transformer-based anomaly detection model. By utilizing the embedding space, Pluto effectively
               identifies clean (normal) samples, even when faced with challenges like uneven anomaly distribution and
-              the presence of subtle or concentrated anomalies. Our experiments on four real-world log benchmark
-              datasets demonstrate that by retaining 77.7% (BGL) to 96.6% (ThunderBird) of the normal sequences while
-              effectively removing 90.3% (BGL) to 100.0% (ThunderBird, HDFS) of the anomalies, Pluto provides a
-              significant absolute F-1 improvement up to 68.86\%\ (2.16% -> 71.02%) compared to the state-of-the-art
-              sample selection methods. This talk is based on the paper "Pluto: Sample Selection for Robust Anomaly
-              Detection on Polluted Log Data" accepted at SIGMOD 25.
+              the presence of subtle or concentrated anomalies. This talk is based on the paper "Pluto: Sample Selection
+              for Robust Anomaly Detection on Polluted Log Data" accepted at SIGMOD 25.
             </p>
           </div>
         </td>
@@ -591,7 +580,8 @@
 
 
       <tr class="success">
-        <td colspan="2" align="center"><strong>Session 4: Evolutionary Databases</strong><br>Chair: Sanket Purandare (Harvard University)</td>
+        <td colspan="2" align="center"><strong>Session 4: Evolutionary Databases</strong><br>Chair: Sanket Purandare
+          (Harvard University)</td>
       </tr>
 
       <tr>
@@ -655,7 +645,8 @@
         <td>
           <i>OLTP Through the Looking Glass 16 Years Later</i>
           <br>
-          Xinjing Zhou (MIT)*; Viktor Leis (TUM); Xiangyao Yu (University of Wisconsin-Madison); Michael Stonebraker (MIT)
+          Xinjing Zhou (MIT)*; Viktor Leis (TUM); Xiangyao Yu (University of Wisconsin-Madison); Michael Stonebraker
+          (MIT)
           <br>
           <a href="javascript: toggleVisibility ('#pa3A')">Click to toggle abstract.</a>
           <div id="pa3A" class="abstract" style="display: none;">

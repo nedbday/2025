@@ -279,20 +279,11 @@
           <a href="javascript: toggleVisibility ('#po8')">Toggle Abstract</a>
           <div id="po8" class="abstract" style="display: none;">
             <p>
-              Image AI has shown great success in numerous areas, from medical imaging to self-driving cars. However,
-              image AI is extremely expensive. We observe that the image storage format lies at the root of the problem.
-              Images today are predominantly stored in JPEG format, which is designed for the human eye. We observe that
-              images are “seen” by algorithms, not humans, during image AI. Every AI application is different in terms
-              of which data components of the images are the most relevant.
-              We introduce the Image Calculator (IC), a self-designing storage format for Image AI. While current
-              state-of-the-art storage formats are fixed and designed for a single purpose, such as minimally
-              interfering with the human eye, IC is a storage-format generator that automatically produces a different
-              storage format for every AI problem. This way, it adapts the storage format to the given context and aims
-              for maximal efficiency in terms of precision and speed. It relies on a columnar storage that efficiently
-              shares data across different applications. It uses sub-task partitioning for a scalable search. We show
-              that IC reduces end-to-end inference time by up to 14x, compresses images by up to 1000x, and improves
-              accuracy by up to 15% thanks to its high-quality design space, tailored storage to the application, and
-              ability to scale many users. </p>
+
+              Image AI is extremely expensive. We observe that the image storage format lies at the root of the problem.
+              We introduce the Image Calculator (IC), a self-designing storage format for Image AI that automatically
+              produces a different storage format for every AI problem. We show that IC reduces end-to-end inference
+              time by up to 14x, compresses images by up to 1000x. </p>
           </div>
         </td>
       </tr>
@@ -300,24 +291,23 @@
         <td>
           Qu Liu (University of Massachusetts Lowell); Emil Zulawnik (University of Massachusetts, Lowell); Tingjian Ge
           (University of Massachusetts, Lowell)*<br />
-          <strong>SCode: A Spherical Code Metric Learning Approach to Continuously Monitoring Predictive Events in
-            Networked Data</strong> <a
+          <strong>SCode: Continuously Learning and Answering Predictive Event Queries over Graph Streams</strong> <a
             href="download/posters/SCode_Continuously_Learning_and_Answering_Predictive_Event_Queries_Over_Graph_Streams.pdf"
             target="_blank">[PDF]</a>
           <br />
           <a href="javascript: toggleVisibility ('#po9')">Toggle Abstract</a>
           <div id="po9" class="abstract" style="display: none;">
             <p>
-              Dynamic graphs are common in many applications to onveniently model heterogeneous data integrated from
-              multiple sources. We study the monitoring of predictive events in dynamic graphs. Treating the problem as
-              a continuous multi-label classification, we use deep metric learning to manage the embedding space and to
-              create spherical codes where each codeword is an embedding vector representing a cluster of data state
-              embeddings with the same results of the predictive events. By continuously training data embeddings from a
-              dynamic graph neural network (DGNN) model and a code generator together, our method, called SCode,
-              achieves significantly better accuracy than DGNN baselines. Moreover, SCode is also about twice as fast as
-              the DGNN baselines, owing to its efficient matching between data state embedding and codewords for
-              multiple events together. Finally, our training sample complexity analysis also sheds light on the
-              generalizability of the online learning.
+              Essentially any data can be modeled as graphs and essentially all graphs are dynamic. Managing and
+              discovering information from dynamic graphs is particularly critical for the numerous applications in
+              which relationships among data entities are abundant. The database community has been studying complex
+              event processing for data streams for decades. The counterpart for intelligent queries over dynamic graphs
+              (aka graph streams) is what we call “monitoring continuous predictive events”, where the users subscribe
+              to a number of interesting predictive events that the system needs to continuously learn and predict to
+              notify users. We tackle the machine learning and computation challenges of how to efficiently and
+              effectively perform both online learning and online continuous query answering. Our approach, called
+              SCode, is a blend of coding theory (spherical code), graph neural networks, multi-label classification,
+              and metric learning. SCode is accurate and efficient.
             </p>
           </div>
         </td>
@@ -460,7 +450,7 @@
 
       <tr>
         <td>
-          Maria Fanelle (Tufts University)*<br />
+          Maria Fanelle (Tufts University)*; Johes Bater (Tufts University)<br />
           <strong>Privacy-Preserving Logging and Recovery for Growing Databases</strong>
           <!--a href="" target="_blank">[PDF]</a--> <br />
           <a href="javascript: toggleVisibility ('#po15')">Toggle Abstract</a>
